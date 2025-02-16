@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(2, 1, 18);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.main {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Lighter transparency */
+  border-radius: 15px;
+  backdrop-filter: blur(15px); /* Stronger blur effect */
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2); /* Softer glow */
+  text-align: center;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Optional border for better visibility */
+}
+
+.heading {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.input_field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+}
+
+.input_field input {
+  flex: 1;
+  padding: 10px;
+  width: 400px;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px 0px 0px 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  outline: none;
+}
+
+.input_field input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.copybtn {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 0px 5px 10px 0px;
+  background-color: rgb(49, 127, 237);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.copybtn:hover {
+  background-color: rgb(30, 100, 200);
+}
+
+.toolcontainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.length, .number, .char {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 1rem;
+  color: rgb(240, 128, 15);
+}
+
+input[type="range"], input[type="checkbox"] {
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .main {
+    width: 95%;
+  }
+
+  .input_field {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .input_field input{
+    width: 250px;
+  }
+
+  .copybtn {
+    border-radius: 10px;
+    width: 100%;
+  }
+
+  .toolcontainer {
+    flex-direction: column;
+    align-items: center;
+  }
+}
